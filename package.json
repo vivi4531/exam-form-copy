@@ -1,0 +1,22 @@
+{
+  "name": "exam-form",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "devDependencies": {
+    "sass": "^1.32.13",
+    "vite": "^2.3.7"
+  },
+  "dependencies": {
+    "jquery-creditcardvalidator": "^1.2.0",
+    "payform": "^1.4.0"
+  },
+  "description": "Repository for the order form for FooBar. 3rd semester exam project.",
+  "main": "main.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

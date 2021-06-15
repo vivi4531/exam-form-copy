@@ -1,0 +1,565 @@
+@import "colors";
+
+.hide {
+  visibility: hidden;
+}
+
+section {
+  height: 100vh;
+  position: absolute;
+}
+
+section .back-arrow {
+  border: none;
+  background-color: transparent;
+  padding: 2em 0 2em;
+
+  img {
+    width: 10%;
+    float: left;
+  }
+}
+
+#frontpage .header {
+  background-color: $darkbrown;
+  // height: 5em;
+  width: 100vw;
+  box-shadow: 0px 8px 15px rgb(0 0 0 / 10%);
+  color: $white;
+  padding: 1em;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  img {
+    width: 20%;
+  }
+}
+
+.content {
+  align-items: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 2em;
+  color: black;
+
+  button:not(.button-remove) {
+    background-color: $darkgreen;
+    color: $white;
+    border: none;
+    border-radius: 2em;
+    padding: 1em 6em;
+    text-align: center;
+    // box-shadow: 0px 8px 15px rgb(0 0 0 / 10%);
+    font-family: "Special Elite", cursive;
+    font-size: 1.3em;
+    opacity: 0.75;
+    width: 100%;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  img {
+    width: 30%;
+  }
+}
+
+#header {
+  background-color: $darkbrown;
+  // height: 5em;
+  width: 100vw;
+  box-shadow: 0px 8px 15px rgb(0 0 0 / 10%);
+  color: $white;
+  padding: 1em;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  img {
+    width: 20%;
+  }
+
+  .basket {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+
+    img {
+      width: 20%;
+    }
+
+    p {
+      font-family: "Special Elite", cursive;
+      font-size: 3em;
+    }
+  }
+}
+
+//MENU - LOOP VIEW
+#menu {
+  display: flex;
+  justify-content: space-between;
+
+  .menu-container {
+    padding-top: 2em;
+  }
+
+  .beer-info {
+    display: flex;
+    // flex-wrap: wrap;
+    /* align-items: center; */
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 5vh;
+
+    img {
+      border-radius: 50%;
+      border: 1px solid $darkbrown;
+      box-shadow: 0px 8px 15px rgb(145 108 93 / 50%);
+    }
+  }
+
+  #menu .content {
+    padding: 58em 2em 2em 2em;
+  }
+
+  .menu-column {
+    flex-grow: 2;
+    flex-basis: 60em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 2em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+    text-align: left;
+  }
+
+  #buttontofrontpage {
+    background-color: transparent;
+    padding: 0em;
+  }
+}
+
+h2 {
+  font-size: 2em;
+  text-align: center;
+}
+
+.menu-price {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+
+  h3 {
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 0.5em;
+  }
+
+  input[type="number"] {
+    background-color: #916c5d;
+    display: flex;
+    background-color: $darkbrown;
+    color: white;
+    border: none;
+    border-radius: 2em;
+    padding: 0em 1em;
+    box-shadow: 0px 8px 15px rgb(0 0 0 / 10%);
+    width: 100%;
+    font-family: "Special Elite", cursive;
+    font-size: 1.5em;
+  }
+
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    opacity: 1;
+  }
+}
+
+//SINGLEVIEW
+#beer-single {
+  margin-top: 10em;
+}
+
+.beer-single-info {
+  display: flex;
+  flex-wrap: wrap;
+  /* align-items: center; */
+  justify-content: space-around;
+  align-items: center;
+  /* padding-bottom: 5vh;*/
+
+  img {
+    width: 80%;
+    border-radius: 50%;
+    border: 1px solid $darkbrown;
+    box-shadow: 0px 8px 15px rgb(145 108 93 / 50%);
+    margin-bottom: 2em;
+  }
+
+  h2 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+  }
+
+  p.alc {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 0.5em;
+    line-height: 1.6em;
+  }
+
+  .menu-price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 2em;
+  }
+
+  .menu-price h3 {
+    font-size: 2em;
+  }
+
+  .menu-price input[type="number"] {
+    width: 30%;
+  }
+}
+
+#beer-single #buttonbacktomenu {
+  background-color: transparent;
+  padding: 0em;
+}
+
+//KURV MED INDHOLD OVERSIGT
+#basket-overview {
+  display: flex;
+  justify-content: space-between;
+  // align-items: center;
+  // border-bottom: 1px solid $darkgreen;
+  // padding-bottom: 5vh;
+
+  .beer-info {
+    display: flex;
+    // flex-wrap: wrap;
+    /* align-items: center; */
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid $darkgreen;
+    padding: 5vh 0 5vh 0;
+
+    img:not(.button-remove img) {
+      border-radius: 50%;
+      border: 1px solid $darkbrown;
+      box-shadow: 0px 8px 15px rgb(145 108 93 / 50%);
+    }
+  }
+
+  #basket-overview .content {
+    padding: 58em 2em 2em 2em;
+  }
+
+  .beerprice-total {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    padding: 5vh 0 5vh 0;
+
+    h3 {
+      font-family: "Special Elite", cursive;
+    }
+
+    h2 {
+      font-family: "Raleway", sans-serif;
+    }
+  }
+
+  .menu-column {
+    flex-grow: 2;
+    flex-basis: 60em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 2em;
+  }
+
+  .form-expires {
+    display: flex;
+  }
+
+  h2 {
+    font-size: 1.5em;
+    text-align: left;
+  }
+
+  #buttonbaskettomenu {
+    background-color: transparent;
+    padding: 0em;
+  }
+}
+
+h2 {
+  font-size: 2em;
+  text-align: center;
+}
+
+.menu-price {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 2;
+  flex-basis: 50em;
+
+  button {
+    background-color: transparent;
+    color: black;
+    border: none;
+    border-radius: 2em;
+    /* padding: 1em 6em; */
+    /* text-align: center; */
+    font-family: "Special Elite", cursive;
+    font-size: 0.6em;
+    /* opacity: 0.75; */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.5em;
+  }
+
+  h3 {
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 0.5em;
+  }
+
+  input[type="number"] {
+    background-color: #916c5d;
+    display: flex;
+    background-color: $darkbrown;
+    color: white;
+    border: none;
+    border-radius: 2em;
+    padding: 0em 1em;
+    box-shadow: 0px 8px 15px rgb(0 0 0 / 10%);
+    width: 100%;
+    font-family: "Special Elite", cursive;
+    font-size: 1.5em;
+  }
+
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    opacity: 1;
+  }
+}
+
+//KURV UDEN INDHOLD
+#emptybasket-overview {
+  display: flex;
+  justify-content: space-between;
+  // align-items: center;
+  // border-bottom: 1px solid $darkgreen;
+  // padding-bottom: 5vh;
+
+  h1 {
+    font-size: 3em;
+    text-align: center;
+  }
+
+  .buttonbacktomenu {
+    font-size: 1.1em;
+  }
+
+  .beer-info {
+    display: flex;
+    // flex-wrap: wrap;
+    /* align-items: center; */
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 5vh;
+
+    align-items: center;
+    border-bottom: 1px solid $darkgreen;
+    padding-bottom: 5vh;
+
+    img:not(.button-remove img) {
+      border-radius: 50%;
+      border: 1px solid $darkbrown;
+      box-shadow: 0px 8px 15px rgb(145 108 93 / 50%);
+    }
+  }
+
+  #basket-overview .content {
+    padding: 58em 2em 2em 2em;
+  }
+
+  .beerprice-total {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+
+    h3 {
+      font-family: "Special Elite", cursive;
+    }
+
+    h2 {
+      font-family: "Raleway", sans-serif;
+    }
+  }
+
+  .menu-column {
+    flex-grow: 2;
+    flex-basis: 60em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 2em;
+  }
+
+  .form-expires {
+    display: flex;
+  }
+
+  h2 {
+    font-size: 1.5em;
+    text-align: left;
+  }
+
+  #buttonbaskettomenu {
+    background-color: transparent;
+    padding: 0em;
+  }
+}
+
+//BETALINGSOPLYSNINGER
+#basket-payment {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 2em;
+
+  #buttonbacktobasketoverview {
+    background-color: transparent;
+    padding: 0em;
+  }
+
+  button {
+    background-color: $darkgreen;
+    color: $white;
+    border: none;
+    border-radius: 2em;
+    padding: 1em 6em;
+    text-align: center;
+    // box-shadow: 0px 8px 15px rgb(0 0 0 / 10%);
+    font-family: "Special Elite", cursive;
+    font-size: 1.3em;
+    opacity: 0.75;
+    width: 100%;
+  }
+
+  label {
+    font-family: "Raleway", sans-serif;
+    font-weight: 300;
+    font-size: 2em;
+    text-align: left;
+  }
+
+  label[for="table"] {
+    border-bottom: 1px solid darkgreen;
+    padding-bottom: 1em;
+  }
+
+  input {
+    background-color: $mediumbrown;
+    border: none;
+    box-shadow: 0px 8px 15px rgb(0 0 0 / 10%);
+    border-radius: 2em;
+    padding: 1em 6em 1em 2em;
+    width: 100%;
+
+    @media screen and (min-width: 820px) and (max-width: 1180px) {
+      width: 100vw;
+    }
+  }
+
+  .form-expires .flex-form {
+    display: flex;
+
+    h3 {
+      margin: 0 0.5em;
+    }
+  }
+}
+
+//ORDREBEKRÆFTELSE
+#confirmation {
+  h3 {
+    font-size: 2em;
+    text-align: center;
+    line-height: 1.6em;
+  }
+
+  .ordreid {
+    font-weight: bolder;
+  }
+}
+
+/* #basket-payment {
+  //VALIDATION
+  // .error {
+  //   opacity: 0;
+  //   visibility: hidden;
+  //   transition: 0.3s ease;
+  //   color: $darkgrey;
+  //   // margin-top: -10vh;
+  //   margin-top: -2em;
+  // }
+
+  input[name="Cardholdersname"]:not(:focus, :placeholder-shown):invalid,
+  input[name="ccnum"]:not(:focus, :placeholder-shown):invalid,
+  input[name="expiry"]:not(:focus, :placeholder-shown):invalid,
+  input[name="ccv"]:not(:focus, :placeholder-shown):invalid {
+    background-color: brown;
+    color: $white;
+  }
+
+  // input[name="Cardholdersname"]:not(:focus, :placeholder-shown):invalid
+  //   ~ .error,
+  // input[name="ccnum"]:not(:focus, :placeholder-shown):invalid ~ .error,
+  // input[name="expiry"]:not(:focus, :placeholder-shown):invalid ~ .error,
+  // input[name="ccv"]:not(:focus, :placeholder-shown):invalid ~ .error {
+  //   opacity: 1;
+  //   visibility: visible;
+  // }
+
+  input[name="Cardholdersname"]:not(:focus, :placeholder-shown):valid,
+  input[name="ccnum"]:not(:focus, :placeholder-shown):valid,
+  input[name="expiry"]:not(:focus, :placeholder-shown):valid,
+  input[name="ccv"]:not(:focus, :placeholder-shown):valid {
+    background: $darkgreen;
+    color: $white;
+  }
+
+  input[name="Cardholdersname"]:focus,
+  input[name="ccnum"]:focus,
+  input[name="expiry"]:focus,
+  input[name="ccv"]:focus {
+    background: $grey;
+    color: $white;
+  }
+}
+ */

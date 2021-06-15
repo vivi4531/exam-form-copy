@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FooBar 🍻</title>
+
+    <link rel="icon" href="public/img/favicon/favicon16x16.svg" type="image/x-icon">
+    <link rel="icon" href="public/img/favicon/favicon32x32.svg" type="image/x-icon">
+</head>
+<body>
+
+<!-- Startside -->
+<section id="frontpage">
+  <div class="layout">
+    <div class="header">
+      <h1>FooBar</h1>
+    </div>
+  <div class="content">
+    <h2>Velkommen til FooBar!</h2>
+    <h3>Bestil din øl nu!</h3>
+      <button class="button-basic buttontomenu">Bestil øl her!</button>
+      <img src="public/img/icons/beermug-pair.png" alt="">
+    </div>
+  </div>
+</section>
+
+<!-- Menu listeview -->
+<div id="header" class="form-header hide">
+  <h1>Menu</h1>
+    <div class="basket">
+      <p id="basketamount">0</p> 
+      <img src="public/img/icons/beermug-single.png" alt="">
+    </div>
+</div>
+
+<section id="menu" class="content hide">
+  <button id="buttontofrontpage" class="back-arrow" type="button"> 
+    <img src="public/img/icons/back-arrow.png" alt="">
+  </button>
+  <div class="menu-container"></div>
+  <template class="beertemplate">
+    <div class="beer-info">
+      <img class="beer-image" src="public/img/beer/githop.png" alt="">
+    <div class="menu-column">
+      <h2 class="beer-name">Øl navn</h2>
+      <p class="alc">IPA, 5%</p>
+    </div>
+    <div class="menu-price">
+      <h3 class="beer-price">45 kr.</h3>
+      <input id="beer_" class="input-beer" type="number" pattern="\d*" min="0" value="0">
+    </div>
+    </div>
+  </template>
+    <button class="buttontobasket button-basic">Gå til kurv</button>
+</section>
+
+<!-- Singleview / popup -->
+<section id="beer-single" class="content hide">
+  <button id="buttonbacktomenu" class="back-arrow" type="button"> 
+    <img src="public/img/icons/back-arrow.png" alt="">
+  </button>
+  <div class="beer-single-info">
+    <img class="beer-image" src="public/img/beer/githop.png" alt="">
+    <div class="menu-column">
+      <h2 class="beer-name">Øl navn</h2>
+      <p class="alc">IPA, 5%</p>
+      <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. A, aspernatur.</p>
+    </div>
+    <div class="menu-price">
+      <h3 class="beer-price">45 kr.</h3>
+      <input id="beersingleinput" class="beersingle-input input-beer" type="number" pattern="\d*" min="0" value="0">
+    </div>
+  </div>
+  <div>
+    <button class="singleviewtobasket button-basic">Gå til kurv</button>
+  </div>
+</section>
+
+<!-- Kurv ordreoversigt -->
+<!-- <div class="form-header">
+    <h1>Kurv</h1>
+    <div class="beer-basket">
+      <p id="basketamount">0</p> 
+      <img src="public/img/icons/beermug-single.png" alt="">
+    </div>
+  </div> -->
+<form action="POST">
+  <section id="basket-overview" class="content hide"> 
+  <button id="buttonbaskettomenu" class="back-arrow" type="button"> 
+    <img src="public/img/icons/back-arrow.png" alt="">
+  </button>
+  <div class="basket-container"></div>
+<template class="baskettemplate">
+  <div class="beer-info">
+    <img class="beer-image" src="public/img/beer/githop.png" alt="">
+    <div class="menu-column">
+      <h2 class="beer-name">Øl navn</h2>
+      <p class="alc">IPA, 5%</p>
+    </div>
+  <div class="menu-price">
+    <h3 class="beer-price">45 kr.</h3>
+      <input id="beerbasket_" class="beer-amount" type="number" min="0">
+      <button type="button" id="removebutton_" class="button-remove">
+        <img src="public/img/icons/trash.png" alt="">
+        <p>Fjern fra ordre</p>
+      </button>
+  </div>
+  </div>
+</template>
+
+<div class="beerprice-total">
+  <h3>I alt</h3>
+  <h2><span class="totalprice"></span></h2>
+</div>
+<button class="baskettopayment button-basic" type="button">Gå til betaling</button>
+</section>
+
+<!-- Tom kurv (hvis man ikke har noget i kurven)-->
+<section id="emptybasket-overview" class="content hide">
+  <div class="layout">
+  <div class="content">
+    <h1>Du har ingen øl i kurven!</h1>
+    <button type="button" class="button-basic buttonbacktomenu">Bestil øl her!</button>
+    <img src="public/img/icons/beermug-pair.png" alt="">
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Betalingsoplysninger -->
+<section id="basket-payment" class="paymentcontent hide">
+  <button id="buttonbacktobasketoverview" class="back-arrow" type="button"> 
+    <img src="public/img/icons/back-arrow.png" alt="">
+  </button>
+
+  <label for="cardholder_name">Kortholders navn
+    <input type="text" id="cardholder_name" name="Cardholdersname" placeholder="Ex. John Doe" minlength="2" required>
+  </label>
+  <!-- <p class="error">Her er en fejl</p> -->
+
+  <label for="ccnum">Kortnummer
+    <input type="tel" id="ccnum" name="ccnum" placeholder="1234 5678 9012 3456"  minlength="19" maxlength="19" required />
+  </label>
+
+  <div class="form-expires">
+    <label for="expiry">Udløbsdato</label>
+    <div class="flex-form">
+      <input placeholder="MM" maxlength="2" size="2" type="tel" pattern="\d*" name="expiry" value="" id="month" required >
+      <h3>/</h3>
+      <input placeholder="YY" maxlength="2" size="2" type="tel" pattern="\d*" name="expiry" value="" id="year" required >
+    </div>
+  </div>
+
+  <label for="ccv">CCV/CVD 
+    <input placeholder="XXX" type="text" id="ccv" name="ccv" pattern="\d*" minlength="3" maxlength="3" size="3" required />
+  </label>
+
+<button class="betalordre button-basic" type="submit">Betal</button>
+
+</section>
+
+
+<!-- Ordrebekræftelse -->
+<section id="confirmation" class="content hide">
+  <h1>Tak!</h1>
+  <h2>Din ordre er godkendt!</h2>
+  <h3 >Dit ordrenummer er: <span class="ordreid"></span></h3>
+  <h3>Du modtager en notifikation, når din ordre er klar til at blive hentet i baren.</h3>
+
+  <img src="public/img/icons/beermug-pair.png" alt="">
+  <button class="button-basic buttontofrontpagefromconfirmation">Til startsiden</button>
+  
+</section>
+
+</form>
+
+    <script type="module" src="/main.js"></script>
+
+</body>
+</html>
