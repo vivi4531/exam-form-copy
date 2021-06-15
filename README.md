@@ -1,4 +1,5 @@
-# exam-form
-Repository for the order form for FooBar. 3rd semester exam project. 
+# exam-form-copy
 
-<a href="https://silly-einstein-44a9c0.netlify.app/">Link to solution online @Netlify</a>
+A copy of the repository for the order form for FooBar. 3rd semester exam project. This is for my oral exam.
+
+<a href="https://musing-jang-392add.netlify.app/">Link to solution online @Netlify</a>
