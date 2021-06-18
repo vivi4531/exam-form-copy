@@ -143,7 +143,7 @@ function updateBasket(){
 
   //Opdater antal øl i kurven (vist i menulinje)
   document.querySelector("#basketamount").innerHTML = (basket.reduce((a,b) => a+b)).toString();
-
+  
   total = 0; 
 
     //buildBasket();
