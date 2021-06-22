@@ -367,11 +367,23 @@ document.querySelector("#ccv").style.color = "none";
 document.querySelector(".buttontofrontpagefromconfirmation").addEventListener("click", () => {document.querySelector("#confirmation").classList.add("hide"); document.querySelector("#frontpage").classList.remove("hide"); document.querySelector("#header h1").textContent = "Menu"; //Rul til toppen
 window.scrollTo(0,0);});
 
+//Notifikation
+setTimeout(showNotification, 5000); 
 }
 
+function showNotification(id){
+  console.log("Din ordre er nu klar."); 
+  document.querySelector("#confirmation").classList.add("hide");
+  document.querySelector("#notifikation").classList.remove("hide");
 
+  //Rul til toppen
+window.scrollTo(0,0);
 
+//Ændre overskrift i header
+document.querySelector("#header h1").textContent = "Notifikation";
+document.querySelector("#header h1").style.fontSize = "3em";  
 
+document.querySelector(".buttontofrontpagefromnotification").addEventListener("click", () => {document.querySelector("#notifikation").classList.add("hide"); document.querySelector("#frontpage").classList.remove("hide"); document.querySelector("#header h1").textContent = "Menu";
+}
 
-
-
+)}; 

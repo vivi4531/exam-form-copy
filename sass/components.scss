@@ -81,9 +81,9 @@ section .back-arrow {
   justify-content: space-between;
   align-items: center;
 
-  @media (max-width: 375px) {
-    width: 100vw;
-  }
+  // @media screen and (min-width: 375px) {
+  //   width: 100vw;
+  // }
 
   img {
     width: 20%;

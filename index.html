@@ -47,17 +47,17 @@
       <h2 class="beer-name">Øl navn</h2>
       <p class="alc">IPA, 5%</p>
     </div>
-    <!-- <div class="menu-price"> -->
+    <div class="menu-price">
       <h3 class="beer-price">45 kr.</h3>
-      <!-- <input id="beer_" class="input-beer" type="number" pattern="\d*" min="0" value="0"> -->
+      <input id="beer_" class="input-beer" type="number" pattern="\d*" min="0" value="0">
 
-      <div class="number-input">
+ <!--      <div class="number-input">
         <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="increasenumber"></button>
         <input id="beer_" class="input-beer quantity" min="0" name="quantity" value="0" type="number">
         <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="increasenumber plus"></button>
-      </div>
+      </div> -->
 
-    <!-- </div> -->
+    </div>
     </div>
   </template>
     <button class="buttontobasket button-basic">Gå til kurv</button>
@@ -181,6 +181,18 @@
   <button class="button-basic buttontofrontpagefromconfirmation">Til startsiden</button>
   
 </section>
+
+<!-- Notifikation -->
+<section id="notifikation" class="content hide">
+  <h1>Værs'go!</h1>
+  <h2>Din ordre er klar.</h2>
+  <h3>Hent din ordre i baren.</h3>
+
+  <img src="public/img/icons/beermug-pair.png" alt="">
+  <button class="button-basic buttontofrontpagefromnotification">Til startsiden</button>
+
+</section>
+
 
 </form>
 
